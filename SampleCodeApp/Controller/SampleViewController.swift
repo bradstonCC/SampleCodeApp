@@ -16,7 +16,7 @@ class SampleViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        loadCountrySampleDataFile()
+        loadSampleDataFile()
     }
     
     func loadDaysData(sampleData: Data) {
@@ -43,8 +43,8 @@ class SampleViewController: UIViewController {
         return sortedDDDArray
     }
     
-    func loadCountrySampleDataFile() {
-        //Load Country Code file stored in app file system into app
+    func loadSampleDataFile() {
+        //Load Sample Data file stored in app file system into app
         if let path = Bundle.main.path(forResource: "SampleData", ofType: "json") {
             //Get URL from file path for loading data
             let url = URL(fileURLWithPath: path)
