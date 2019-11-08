@@ -9,15 +9,33 @@
 import UIKit
 
 class SampleViewController: UIViewController {
+    
+    //These are the permitted Segues that user can travel to from this VC
+    let allowedSegues = ["ToSessionDetails", "ToHome"]
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    //MARK: - Actions
+    
+    @IBAction func toHomePressed(_ sender: Any) {
         
+        SegueClass.toHome()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        loadSampleDataFile()
+    @IBAction func toSessionDetailsPressed(_ sender: Any) {
+        
+        SegueClass.toSessionDetails()
     }
+    
+    
+    
+    // MARK: - Lifecylce
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
+    // MARK: - Data Parsing
     
     func loadDaysData(sampleData: Data) {
                 
@@ -59,5 +77,16 @@ class SampleViewController: UIViewController {
         }
         
     }
+    
+    // MARK: - Segues
 
+    @IBAction func unwindSegueToSampleViewController(segue: UIStoryboardSegue) {
+        
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        //Check if current called segue is allowed with this VC
+        return SegueClass.isSegueAllowed(allowedSegues: allowedSegues, segueID: identifier)
+    }
+    
 }

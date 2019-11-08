@@ -10,9 +10,8 @@
         <!--Navigation Controller-->
         <scene sceneID="Swy-5q-5IJ">
             <objects>
-                <navigationController id="j5E-iY-0gb" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="j5E-iY-0gb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zql-Md-8Qi">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -30,14 +29,60 @@
                     <view key="view" contentMode="scaleToFill" id="aIx-gs-B3U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPu-PI-gtq">
+                                <rect key="frame" x="176" y="182" width="62" height="30"/>
+                                <state key="normal" title="To Home"/>
+                                <connections>
+                                    <action selector="toHomePressed:" destination="ycR-yI-frz" eventType="touchUpInside" id="Geq-aQ-lGh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4r9-TS-DqJ">
+                                <rect key="frame" x="144.5" y="321" width="125" height="30"/>
+                                <state key="normal" title="To Session Details"/>
+                                <connections>
+                                    <action selector="toSessionDetailsPressed:" destination="ycR-yI-frz" eventType="touchUpInside" id="6hs-lW-k4L"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EPu-PI-gtq" firstAttribute="centerX" secondItem="00O-p5-jf8" secondAttribute="centerX" id="0Tq-5x-Z74"/>
+                            <constraint firstItem="EPu-PI-gtq" firstAttribute="top" secondItem="00O-p5-jf8" secondAttribute="top" constant="138" id="Ekv-Zv-XyI"/>
+                            <constraint firstItem="4r9-TS-DqJ" firstAttribute="top" secondItem="EPu-PI-gtq" secondAttribute="bottom" constant="109" id="aNp-4I-Kwo"/>
+                            <constraint firstItem="4r9-TS-DqJ" firstAttribute="centerX" secondItem="EPu-PI-gtq" secondAttribute="centerX" id="iZT-0Q-zQx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="00O-p5-jf8"/>
                     </view>
                     <navigationItem key="navigationItem" id="C2z-XI-h0x"/>
+                    <connections>
+                        <segue destination="IaZ-5a-gTe" kind="show" identifier="ToHome" id="AcX-on-bjq"/>
+                        <segue destination="CPG-Up-k6o" kind="show" identifier="ToSessionDetails" id="bF3-Hb-ugu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0j-eP-n7Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1812" y="-147"/>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="Xq8-Bh-6Sj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeViewStoryboard" referencedIdentifier="HomeViewController" id="IaZ-5a-gTe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jkP-Xo-4mX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pu-wS-DR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-749" y="-348"/>
+        </scene>
+        <!--SessionDetailsViewController-->
+        <scene sceneID="YrQ-x1-GDs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SessionDetailsStoryboard" referencedIdentifier="SessionDetailsViewController" id="CPG-Up-k6o" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="o4K-OK-v5h"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hzq-7d-jG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-770" y="-33"/>
         </scene>
     </scenes>
 </document>

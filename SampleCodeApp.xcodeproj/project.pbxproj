@@ -24,6 +24,11 @@
 		F469599223760CB6005B2F17 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469599123760CB6005B2F17 /* UIColorExtension.swift */; };
 		F469599723761948005B2F17 /* SampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = F469599623761948005B2F17 /* SampleData.json */; };
 		F469599923761CA2005B2F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F469599823761CA2005B2F17 /* Main.storyboard */; };
+		F469599C237628BB005B2F17 /* SessionDetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F469599A237628BB005B2F17 /* SessionDetailsStoryboard.storyboard */; };
+		F469599D237628BB005B2F17 /* HomeViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F469599B237628BB005B2F17 /* HomeViewStoryboard.storyboard */; };
+		F469599F23762AD3005B2F17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469599E23762AD3005B2F17 /* HomeViewController.swift */; };
+		F46959A123762AE0005B2F17 /* SessionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46959A023762AE0005B2F17 /* SessionDetailsViewController.swift */; };
+		F46959A323762E2F005B2F17 /* General.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46959A223762E2F005B2F17 /* General.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +52,11 @@
 		F469599123760CB6005B2F17 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		F469599623761948005B2F17 /* SampleData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleData.json; sourceTree = "<group>"; };
 		F469599823761CA2005B2F17 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F469599A237628BB005B2F17 /* SessionDetailsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SessionDetailsStoryboard.storyboard; sourceTree = "<group>"; };
+		F469599B237628BB005B2F17 /* HomeViewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewStoryboard.storyboard; sourceTree = "<group>"; };
+		F469599E23762AD3005B2F17 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F46959A023762AE0005B2F17 /* SessionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailsViewController.swift; sourceTree = "<group>"; };
+		F46959A223762E2F005B2F17 /* General.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = General.xcassets; sourceTree = "<group>"; };
 		FF42296032F30C486440C83E /* Pods-SampleCodeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCodeApp.release.xcconfig"; path = "Target Support Files/Pods-SampleCodeApp/Pods-SampleCodeApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +118,7 @@
 				F4695995237618F7005B2F17 /* Utilites */,
 				F46959932376188D005B2F17 /* Sample Data */,
 				F469596723760350005B2F17 /* Assets.xcassets */,
+				F46959A223762E2F005B2F17 /* General.xcassets */,
 				F469596F23760350005B2F17 /* Info.plist */,
 				F469599023760A1B005B2F17 /* Preview Content */,
 			);
@@ -141,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				F46959772376061F005B2F17 /* SampleViewController.swift */,
+				F469599E23762AD3005B2F17 /* HomeViewController.swift */,
+				F46959A023762AE0005B2F17 /* SessionDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -148,6 +161,8 @@
 		F469597D23760904005B2F17 /* Sample Views */ = {
 			isa = PBXGroup;
 			children = (
+				F469599B237628BB005B2F17 /* HomeViewStoryboard.storyboard */,
+				F469599A237628BB005B2F17 /* SessionDetailsStoryboard.storyboard */,
 			);
 			path = "Sample Views";
 			sourceTree = "<group>";
@@ -241,6 +256,9 @@
 				F469596823760350005B2F17 /* Assets.xcassets in Resources */,
 				F469599723761948005B2F17 /* SampleData.json in Resources */,
 				F469599923761CA2005B2F17 /* Main.storyboard in Resources */,
+				F46959A323762E2F005B2F17 /* General.xcassets in Resources */,
+				F469599C237628BB005B2F17 /* SessionDetailsStoryboard.storyboard in Resources */,
+				F469599D237628BB005B2F17 /* HomeViewStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +315,7 @@
 				F469598B23760943005B2F17 /* DayData.swift in Sources */,
 				F46959782376061F005B2F17 /* SampleViewController.swift in Sources */,
 				F469598E23760943005B2F17 /* DaysClass.swift in Sources */,
+				F46959A123762AE0005B2F17 /* SessionDetailsViewController.swift in Sources */,
 				F469598723760943005B2F17 /* SessionData.swift in Sources */,
 				F469598F23760943005B2F17 /* ZoneData.swift in Sources */,
 				F469598A23760943005B2F17 /* CustomAlertManager.swift in Sources */,
@@ -304,6 +323,7 @@
 				F469598823760943005B2F17 /* DashboardDataClass.swift in Sources */,
 				F469598D23760943005B2F17 /* DashboardDayData.swift in Sources */,
 				F469598C23760943005B2F17 /* AlertViewManager.swift in Sources */,
+				F469599F23762AD3005B2F17 /* HomeViewController.swift in Sources */,
 				F469599223760CB6005B2F17 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
