@@ -11,6 +11,27 @@ class SegueClass: NSObject {
     
     // MARK: - View Controller Segues
     
+    class func toSampleViewController() {
+        let unwindSegueExists = doesUnwindSegueExist(myCustomClass: SampleViewController.self)
+        
+        if unwindSegueExists {
+            shouldSegueBePerformed(segueID: "unwindSegueToSampleViewController")
+        } else {
+            //Do nothing as segue does not exist
+        }
+    }
+    
+    class func toHome() {
+        
+        shouldSegueBePerformed(segueID: "ToHome")
+    }
+    
+    class func toSessionDetails() {
+        
+        shouldSegueBePerformed(segueID: "ToSessionDetails")
+        
+    }
+    
     class func toDesiredVC() {
         let unwindSegueExists = doesUnwindSegueExist(myCustomClass: SampleViewController.self)
         
