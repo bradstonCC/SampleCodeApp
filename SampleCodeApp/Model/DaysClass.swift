@@ -23,7 +23,7 @@ enum DaysClass {
          //Convert data from request to JSON object
          jsonOptional = try? JSON(data: sessionData)
         
-         //unwrap and ensure JSON is valid and days data exists in JSON object
+         //Unwrap and ensure JSON is valid and days data exists in JSON object
          guard let json = jsonOptional else {return []}
          guard let days = json["days"].dictionary else {return []}
          //Will store all days Objects in format we desire

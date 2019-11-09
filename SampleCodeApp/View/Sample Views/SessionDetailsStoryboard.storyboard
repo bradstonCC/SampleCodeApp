@@ -416,7 +416,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5s-5p-iYd" userLabel="Middle View">
                                 <rect key="frame" x="0.0" y="184" width="414" height="444"/>
                                 <subviews>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4O-bq-OBm" customClass="GMSMapView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4O-bq-OBm" userLabel="mapView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="444"/>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
@@ -458,7 +458,7 @@
                                     <constraint firstItem="ZsE-tE-CUv" firstAttribute="leading" secondItem="h5s-5p-iYd" secondAttribute="leading" constant="25" id="vkB-qV-JhR"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEU-dH-7MA" userLabel="Loading View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEU-dH-7MA" userLabel="Loading View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="E2k-Cd-atb">
@@ -505,6 +505,8 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="loadingView" destination="JEU-dH-7MA" id="dRh-fC-hWs"/>
+                        <outlet property="mapView" destination="b4O-bq-OBm" id="O8q-HL-CZ6"/>
                         <segue destination="Wat-P6-Dum" kind="unwind" identifier="unwindSegueToSampleViewController" unwindAction="unwindSegueToSampleViewControllerWithSegue:" id="gDS-K5-kan"/>
                     </connections>
                 </viewController>
