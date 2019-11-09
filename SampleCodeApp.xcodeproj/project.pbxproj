@@ -29,6 +29,9 @@
 		F469599F23762AD3005B2F17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469599E23762AD3005B2F17 /* HomeViewController.swift */; };
 		F46959A123762AE0005B2F17 /* SessionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46959A023762AE0005B2F17 /* SessionDetailsViewController.swift */; };
 		F46959A323762E2F005B2F17 /* General.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46959A223762E2F005B2F17 /* General.xcassets */; };
+		F46959A523765214005B2F17 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46959A423765214005B2F17 /* WebViewController.swift */; };
+		F46959A82376566E005B2F17 /* DataParsingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46959A62376566E005B2F17 /* DataParsingViewController.swift */; };
+		F46959AB23765B47005B2F17 /* DataParsingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46959AA23765B47005B2F17 /* DataParsingStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		F469599E23762AD3005B2F17 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F46959A023762AE0005B2F17 /* SessionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailsViewController.swift; sourceTree = "<group>"; };
 		F46959A223762E2F005B2F17 /* General.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = General.xcassets; sourceTree = "<group>"; };
+		F46959A423765214005B2F17 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		F46959A62376566E005B2F17 /* DataParsingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParsingViewController.swift; sourceTree = "<group>"; };
+		F46959AA23765B47005B2F17 /* DataParsingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataParsingStoryboard.storyboard; sourceTree = "<group>"; };
 		FF42296032F30C486440C83E /* Pods-SampleCodeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCodeApp.release.xcconfig"; path = "Target Support Files/Pods-SampleCodeApp/Pods-SampleCodeApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +157,8 @@
 		F469597B23760652005B2F17 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F46959A62376566E005B2F17 /* DataParsingViewController.swift */,
+				F46959A423765214005B2F17 /* WebViewController.swift */,
 				F46959772376061F005B2F17 /* SampleViewController.swift */,
 				F469599E23762AD3005B2F17 /* HomeViewController.swift */,
 				F46959A023762AE0005B2F17 /* SessionDetailsViewController.swift */,
@@ -163,6 +171,7 @@
 			children = (
 				F469599B237628BB005B2F17 /* HomeViewStoryboard.storyboard */,
 				F469599A237628BB005B2F17 /* SessionDetailsStoryboard.storyboard */,
+				F46959AA23765B47005B2F17 /* DataParsingStoryboard.storyboard */,
 			);
 			path = "Sample Views";
 			sourceTree = "<group>";
@@ -257,6 +266,7 @@
 				F469599723761948005B2F17 /* SampleData.json in Resources */,
 				F469599923761CA2005B2F17 /* Main.storyboard in Resources */,
 				F46959A323762E2F005B2F17 /* General.xcassets in Resources */,
+				F46959AB23765B47005B2F17 /* DataParsingStoryboard.storyboard in Resources */,
 				F469599C237628BB005B2F17 /* SessionDetailsStoryboard.storyboard in Resources */,
 				F469599D237628BB005B2F17 /* HomeViewStoryboard.storyboard in Resources */,
 			);
@@ -318,12 +328,14 @@
 				F46959A123762AE0005B2F17 /* SessionDetailsViewController.swift in Sources */,
 				F469598723760943005B2F17 /* SessionData.swift in Sources */,
 				F469598F23760943005B2F17 /* ZoneData.swift in Sources */,
+				F46959A82376566E005B2F17 /* DataParsingViewController.swift in Sources */,
 				F469598A23760943005B2F17 /* CustomAlertManager.swift in Sources */,
 				F46959622376034F005B2F17 /* AppDelegate.swift in Sources */,
 				F469598823760943005B2F17 /* DashboardDataClass.swift in Sources */,
 				F469598D23760943005B2F17 /* DashboardDayData.swift in Sources */,
 				F469598C23760943005B2F17 /* AlertViewManager.swift in Sources */,
 				F469599F23762AD3005B2F17 /* HomeViewController.swift in Sources */,
+				F46959A523765214005B2F17 /* WebViewController.swift in Sources */,
 				F469599223760CB6005B2F17 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

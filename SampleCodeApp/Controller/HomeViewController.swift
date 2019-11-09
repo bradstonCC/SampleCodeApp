@@ -15,17 +15,17 @@ class HomeViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func backButtonPressed(_ sender: Any) {
-        
         SegueClass.toSampleViewController()
-        
     }
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     // MARK: - Segues

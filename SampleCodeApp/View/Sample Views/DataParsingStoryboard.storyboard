@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data Parsing View Controller-->
+        <scene sceneID="JxF-kB-YBn">
+            <objects>
+                <viewController storyboardIdentifier="DataParsingViewController" id="g6j-7Z-5Li" customClass="DataParsingViewController" customModule="SampleCodeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uxr-bJ-ZZs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raw Input JSON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAj-IS-2RC">
+                                <rect key="frame" x="141" y="49" width="132.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LS-QW-mZF">
+                                <rect key="frame" x="10" y="75" width="394" height="235"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="250" id="PMZ-OL-YrM"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parsed Day Element" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcF-pl-B69">
+                                <rect key="frame" x="125" y="320" width="164" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmQ-9a-XRn">
+                                <rect key="frame" x="10" y="346" width="394" height="235"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aggregated  Day Element" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sx-8q-ALa">
+                                <rect key="frame" x="103.5" y="591" width="207" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4p-Ze-C2v">
+                                <rect key="frame" x="10" y="617" width="394" height="235"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <constraints>
+                            <constraint firstItem="L4p-Ze-C2v" firstAttribute="centerX" secondItem="mmQ-9a-XRn" secondAttribute="centerX" id="41p-ES-trs"/>
+                            <constraint firstItem="9W1-Nw-vd9" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="L4p-Ze-C2v" secondAttribute="bottom" constant="10" id="7al-38-w1n"/>
+                            <constraint firstItem="9W1-Nw-vd9" firstAttribute="trailing" secondItem="7LS-QW-mZF" secondAttribute="trailing" constant="10" id="Btm-Oa-4fW"/>
+                            <constraint firstItem="2Sx-8q-ALa" firstAttribute="centerX" secondItem="mmQ-9a-XRn" secondAttribute="centerX" id="Fk7-oF-UZt"/>
+                            <constraint firstItem="mmQ-9a-XRn" firstAttribute="width" secondItem="7LS-QW-mZF" secondAttribute="width" id="KUU-2d-SJs"/>
+                            <constraint firstItem="L4p-Ze-C2v" firstAttribute="height" secondItem="mmQ-9a-XRn" secondAttribute="height" id="Oys-M6-RKb"/>
+                            <constraint firstItem="kAj-IS-2RC" firstAttribute="top" secondItem="9W1-Nw-vd9" secondAttribute="top" constant="5" id="Pq5-JI-g2M"/>
+                            <constraint firstItem="CcF-pl-B69" firstAttribute="centerX" secondItem="7LS-QW-mZF" secondAttribute="centerX" id="Too-3R-aEb"/>
+                            <constraint firstItem="CcF-pl-B69" firstAttribute="top" secondItem="7LS-QW-mZF" secondAttribute="bottom" constant="10" id="WNb-P7-KPt"/>
+                            <constraint firstItem="kAj-IS-2RC" firstAttribute="centerX" secondItem="9W1-Nw-vd9" secondAttribute="centerX" id="dsC-Rj-XH7"/>
+                            <constraint firstItem="mmQ-9a-XRn" firstAttribute="centerX" secondItem="7LS-QW-mZF" secondAttribute="centerX" id="g5h-Pf-Q41"/>
+                            <constraint firstItem="L4p-Ze-C2v" firstAttribute="width" secondItem="mmQ-9a-XRn" secondAttribute="width" id="ioc-kx-vwo"/>
+                            <constraint firstItem="mmQ-9a-XRn" firstAttribute="top" secondItem="CcF-pl-B69" secondAttribute="bottom" constant="5" id="ms3-TC-7DX"/>
+                            <constraint firstItem="L4p-Ze-C2v" firstAttribute="top" secondItem="2Sx-8q-ALa" secondAttribute="bottom" constant="5" id="pJx-Ze-E4A"/>
+                            <constraint firstItem="2Sx-8q-ALa" firstAttribute="top" secondItem="mmQ-9a-XRn" secondAttribute="bottom" constant="10" id="qtg-Ll-lcg"/>
+                            <constraint firstItem="mmQ-9a-XRn" firstAttribute="height" secondItem="7LS-QW-mZF" secondAttribute="height" id="qxr-gI-bmT"/>
+                            <constraint firstItem="7LS-QW-mZF" firstAttribute="leading" secondItem="9W1-Nw-vd9" secondAttribute="leading" constant="10" id="tXe-VC-reJ"/>
+                            <constraint firstItem="7LS-QW-mZF" firstAttribute="top" secondItem="kAj-IS-2RC" secondAttribute="bottom" constant="5" id="tiK-2I-g5a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9W1-Nw-vd9"/>
+                    </view>
+                    <connections>
+                        <outlet property="aggregatedDashboardDataInputField" destination="L4p-Ze-C2v" id="CKB-v2-ZPr"/>
+                        <outlet property="parsedDayDataInputField" destination="mmQ-9a-XRn" id="kPf-5B-lI9"/>
+                        <outlet property="rawJSONInputField" destination="7LS-QW-mZF" id="jqL-OQ-NQ3"/>
+                        <segue destination="BRh-4K-SbJ" kind="unwind" identifier="unwindSegueToSampleViewController" unwindAction="unwindSegueToSampleViewControllerWithSegue:" id="oZd-st-7Q0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wb7-JR-cv0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="BRh-4K-SbJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="8.6956521739130448" y="107.8125"/>
+        </scene>
+    </scenes>
+</document>

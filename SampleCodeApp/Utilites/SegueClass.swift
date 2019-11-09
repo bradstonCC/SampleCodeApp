@@ -22,14 +22,19 @@ class SegueClass: NSObject {
     }
     
     class func toHome() {
-        
         shouldSegueBePerformed(segueID: "ToHome")
     }
     
     class func toSessionDetails() {
-        
         shouldSegueBePerformed(segueID: "ToSessionDetails")
-        
+    }
+    
+    class func toDataParsing() {
+        shouldSegueBePerformed(segueID: "ToDataParsing")
+    }
+    
+    class func toWebView() {
+        shouldSegueBePerformed(segueID: "ToWebView")
     }
     
     class func toDesiredVC() {
