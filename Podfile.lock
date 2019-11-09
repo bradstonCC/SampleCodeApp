@@ -1,16 +1,24 @@
 PODS:
+  - GoogleMaps (3.6.0):
+    - GoogleMaps/Maps (= 3.6.0)
+  - GoogleMaps/Base (3.6.0)
+  - GoogleMaps/Maps (3.6.0):
+    - GoogleMaps/Base
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - GoogleMaps (~> 3.6)
   - SwiftyJSON (~> 5.0)
 
 SPEC REPOS:
   trunk:
+    - GoogleMaps
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  GoogleMaps: 82f8fe307193bb4de6ef6bf9e88f1d624b718f9d
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 4f8cd16373f58d7f2747f738485bef92eac94901
+PODFILE CHECKSUM: b2132499550ee87e5ec72ef4ffa42a3d8953cec3
 
 COCOAPODS: 1.8.3

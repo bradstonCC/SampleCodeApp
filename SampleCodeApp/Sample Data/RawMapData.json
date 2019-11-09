@@ -1,0 +1,255 @@
+//Raw Data from https://developer.here.com/api-explorer/rest/routing/route-from-a-to-b
+
+//Baton Rouge (LSU Tiger Stadium to State Capitol)
+
+{
+  "response": {
+    "metaInfo": {
+      "timestamp": "2019-11-09T23:01:51Z",
+      "mapVersion": "8.30.102.150",
+      "moduleVersion": "7.2.201944-5680",
+      "interfaceVersion": "2.6.74",
+      "availableMapVersion": [
+        "8.30.102.150"
+      ]
+    },
+    "route": [
+      {
+        "waypoint": [
+          {
+            "linkId": "+90191741",
+            "mappedPosition": {
+              "latitude": 30.4124039,
+              "longitude": -91.1826974
+            },
+            "originalPosition": {
+              "latitude": 30.4119999,
+              "longitude": -91.1838001
+            },
+            "type": "stopOver",
+            "spot": 0.4714286,
+            "sideOfStreet": "neither",
+            "mappedRoadName": "",
+            "label": "",
+            "shapeIndex": 0,
+            "source": "user"
+          },
+          {
+            "linkId": "+948780313",
+            "mappedPosition": {
+              "latitude": 30.4564194,
+              "longitude": -91.1875952
+            },
+            "originalPosition": {
+              "latitude": 30.4566,
+              "longitude": -91.1876
+            },
+            "type": "stopOver",
+            "spot": 0.0392157,
+            "sideOfStreet": "left",
+            "mappedRoadName": "State Capitol Dr",
+            "label": "State Capitol Dr",
+            "shapeIndex": 69,
+            "source": "user"
+          }
+        ],
+        "mode": {
+          "type": "fastest",
+          "transportModes": [
+            "car"
+          ],
+          "trafficMode": "enabled",
+          "feature": []
+        },
+        "leg": [
+          {
+            "start": {
+              "linkId": "+90191741",
+              "mappedPosition": {
+                "latitude": 30.4124039,
+                "longitude": -91.1826974
+              },
+              "originalPosition": {
+                "latitude": 30.4119999,
+                "longitude": -91.1838001
+              },
+              "type": "stopOver",
+              "spot": 0.4714286,
+              "sideOfStreet": "neither",
+              "mappedRoadName": "",
+              "label": "",
+              "shapeIndex": 0,
+              "source": "user"
+            },
+            "end": {
+              "linkId": "+948780313",
+              "mappedPosition": {
+                "latitude": 30.4564194,
+                "longitude": -91.1875952
+              },
+              "originalPosition": {
+                "latitude": 30.4566,
+                "longitude": -91.1876
+              },
+              "type": "stopOver",
+              "spot": 0.0392157,
+              "sideOfStreet": "left",
+              "mappedRoadName": "State Capitol Dr",
+              "label": "State Capitol Dr",
+              "shapeIndex": 69,
+              "source": "user"
+            },
+            "length": 5925,
+            "travelTime": 847,
+            "maneuver": [
+              {
+                "position": {
+                  "latitude": 30.4124039,
+                  "longitude": -91.1826974
+                },
+                "instruction": "Head toward <span class=\"toward_street\">N Stadium Rd</span>. <span class=\"distance-description\">Go for <span class=\"length\">148 m</span>.</span>",
+                "travelTime": 57,
+                "length": 148,
+                "id": "M1",
+                "_type": "PrivateTransportManeuverType"
+              },
+              {
+                "position": {
+                  "latitude": 30.4136324,
+                  "longitude": -91.1833048
+                },
+                "instruction": "Turn <span class=\"direction\">right</span> onto <span class=\"next-street\">N Stadium Rd</span>. <span class=\"distance-description\">Go for <span class=\"length\">80 m</span>.</span>",
+                "travelTime": 16,
+                "length": 80,
+                "id": "M2",
+                "_type": "PrivateTransportManeuverType"
+              },
+              {
+                "position": {
+                  "latitude": 30.4139864,
+                  "longitude": -91.1825752
+                },
+                "instruction": "Take the <span class=\"exit\">2nd exit</span> from roundabout onto <span class=\"next-street\">Field House Dr</span>. <span class=\"distance-description\">Go for <span class=\"length\">234 m</span>.</span>",
+                "travelTime": 74,
+                "length": 234,
+                "id": "M3",
+                "_type": "PrivateTransportManeuverType"
+              },
+              {
+                "position": {
+                  "latitude": 30.4156923,
+                  "longitude": -91.1823606
+                },
+                "instruction": "Turn <span class=\"direction\">left</span> onto <span class=\"next-street\">Cypress Dr</span>. <span class=\"distance-description\">Go for <span class=\"length\">416 m</span>.</span>",
+                "travelTime": 88,
+                "length": 416,
+                "id": "M4",
+                "_type": "PrivateTransportManeuverType"
+              },
+              {
+                "position": {
+                  "latitude": 30.4177523,
+                  "longitude": -91.1841309
+                },
+                "instruction": "Continue on <span class=\"next-street\">Alaska St</span>. <span class=\"distance-description\">Go for <span class=\"length\">211 m</span>.</span>",
+                "travelTime": 40,
+                "length": 211,
+                "id": "M5",
+                "_type": "PrivateTransportManeuverType"
+              },
+              {
+                "position": {
+                  "latitude": 30.4196513,
+                  "longitude": -91.1841738
+                },
+                "instruction": "Turn <span class=\"direction\">left</span> onto <span class=\"next-street\">Aster St</span>. <span class=\"distance-description\">Go for <span class=\"length\">311 m</span>.</span>",
+                "travelTime": 52,
+                "length": 311,
+                "id": "M6",
+                "_type": "PrivateTransportManeuverType"
+              },
+              {
+                "position": {
+                  "latitude": 30.4195976,
+                  "longitude": -91.1874139
+                },
+                "instruction": "Turn <span class=\"direction\">right</span> onto <span class=\"next-street\">Nicholson Dr</span> <span class=\"number\">(LA-30)</span>. <span class=\"distance-description\">Go for <span class=\"length\">2.6 km</span>.</span>",
+                "travelTime": 263,
+                "length": 2643,
+                "id": "M7",
+                "_type": "PrivateTransportManeuverType"
+              },
+              {
+                "position": {
+                  "latitude": 30.4433298,
+                  "longitude": -91.1874783
+                },
+                "instruction": "Turn <span class=\"direction\">left</span> onto <span class=\"next-street\">Government St</span> <span class=\"number\">(LA-73)</span>. <span class=\"distance-description\">Go for <span class=\"length\">95 m</span>.</span>",
+                "travelTime": 14,
+                "length": 95,
+                "id": "M8",
+                "_type": "PrivateTransportManeuverType"
+              },
+              {
+                "position": {
+                  "latitude": 30.4432976,
+                  "longitude": -91.1884654
+                },
+                "instruction": "Continue on <span class=\"next-street\">Government St</span>. <span class=\"distance-description\">Go for <span class=\"length\">211 m</span>.</span>",
+                "travelTime": 30,
+                "length": 211,
+                "id": "M9",
+                "_type": "PrivateTransportManeuverType"
+              },
+              {
+                "position": {
+                  "latitude": 30.4440916,
+                  "longitude": -91.1899137
+                },
+                "instruction": "Continue on <span class=\"next-street\">S River Rd</span>. <span class=\"distance-description\">Go for <span class=\"length\">1.3 km</span>.</span>",
+                "travelTime": 194,
+                "length": 1347,
+                "id": "M10",
+                "_type": "PrivateTransportManeuverType"
+              },
+              {
+                "position": {
+                  "latitude": 30.4561293,
+                  "longitude": -91.1899459
+                },
+                "instruction": "Turn <span class=\"direction\">right</span> onto <span class=\"next-street\">State Capitol Dr</span>. <span class=\"distance-description\">Go for <span class=\"length\">229 m</span>.</span>",
+                "travelTime": 32,
+                "length": 229,
+                "id": "M11",
+                "_type": "PrivateTransportManeuverType"
+              },
+              {
+                "position": {
+                  "latitude": 30.4564194,
+                  "longitude": -91.1875952
+                },
+                "instruction": "Arrive at <span class=\"street\">State Capitol Dr</span>. Your destination is on the left.",
+                "travelTime": 0,
+                "length": 0,
+                "id": "M12",
+                "_type": "PrivateTransportManeuverType"
+              }
+            ]
+          }
+        ],
+        "summary": {
+          "distance": 5925,
+          "trafficTime": 847,
+          "baseTime": 776,
+          "flags": [
+            "noThroughRoad",
+            "builtUpArea"
+          ],
+          "text": "The trip takes <span class=\"length\">5.9 km</span> and <span class=\"time\">14 mins</span>.",
+          "travelTime": 847,
+          "_type": "RouteSummaryType"
+        }
+      }
+    ],
+    "language": "en-us"
+  }

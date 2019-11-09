@@ -7,5 +7,6 @@ target 'SampleCodeApp' do
 
   # Pods for SampleCodeApp
   pod 'SwiftyJSON', '~> 5.0'
+  pod 'GoogleMaps', '~> 3.6'
 
 end
