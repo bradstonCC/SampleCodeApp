@@ -1,5 +1,5 @@
 //
-//  SampleViewController.swift
+//  DataParsingViewController.swift
 //  SampleCodeApp
 //
 //  Created by Bradston Henry on 11/8/19.
@@ -8,52 +8,53 @@
 
 import UIKit
 
-class SampleViewController: UIViewController {
-    
-    //These are the permitted Segues that user can travel to from this VC
-    let allowedSegues = ["ToSessionDetails", "ToHome", "ToWebView", "ToDataParsing"]
+class DataParsingViewController: UIViewController {
 
+    @IBOutlet weak var rawJSONInputField: UITextView!
     
-    //MARK: - Actions
+    @IBOutlet weak var parsedDayDataInputField: UITextView!
     
-    @IBAction func toHomePressed(_ sender: Any) {
-        
-        SegueClass.toHome()
-    }
-    
-    @IBAction func toSessionDetailsPressed(_ sender: Any) {
-        
-        SegueClass.toSessionDetails()
-    }
-    
-    @IBAction func linkedInButtonPressed(_ sender: Any) {
-        SegueClass.toWebView()
-    }
-    
-    @IBAction func toDataParsingPressed(_ sender: Any) {
-        SegueClass.toDataParsing()
-    }
-    
-    
-    // MARK: - Lifecylce
+    @IBOutlet weak var aggregatedDashboardDataInputField: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let textBorderColor: UIColor = .black
+        rawJSONInputField.layer.borderColor = textBorderColor.cgColor
+        rawJSONInputField.layer.borderWidth = 2.0
+        parsedDayDataInputField.layer.borderColor = textBorderColor.cgColor
+        parsedDayDataInputField.layer.borderWidth = 2.0
+        aggregatedDashboardDataInputField.layer.borderColor = textBorderColor.cgColor
+        aggregatedDashboardDataInputField.layer.borderWidth = 2.0
+        
+        loadSampleDataFile()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-    
+
     // MARK: - Data Parsing
     
     func loadDaysData(sampleData: Data) {
                 
         let daysData = DaysClass.parseSessionsResponseData(sessionData: sampleData)
         
+        //Display one element Dahsboard Data array for view
+        if daysData.count > 0 {
+            if let sampleDay = daysData.first {
+                parsedDayDataInputField.text = "\(sampleDay)"
+            }
+        }
+        
         let dashboardDaysData = getDashboardDaysData(withDaysData: daysData)
         
-        let filteredDashboardData = DashboardDataClass.getFilteredDashboardData(withTimeframe: .lastDay, dashboardDaysData: dashboardDaysData)
+        let filteredDashboardData = DashboardDataClass.getFilteredDashboardData(withTimeframe: .last30Days, dashboardDaysData: dashboardDaysData)
+        
+        
+        
         print(filteredDashboardData)
         
     }
@@ -68,6 +69,13 @@ class SampleViewController: UIViewController {
         //Sort Array to make sure days in order by date (descending)
         let sortedDDDArray = dDaysDataArray.sorted(by: {($0.date) > ($1.date)})
         
+        //Display one element Dahsboard Data array for view
+        if dDaysDataArray.count > 0 {
+            if let sampleDDaysData = dDaysDataArray.first {
+                aggregatedDashboardDataInputField.text = "\(sampleDDaysData)"
+            }
+        }
+        
         return sortedDDDArray
     }
     
@@ -80,6 +88,10 @@ class SampleViewController: UIViewController {
             do {
                 let urlAsData = try Data(contentsOf: url, options: NSData.ReadingOptions.mappedIfSafe)
                 loadDaysData(sampleData: urlAsData)
+                
+                let jsonText = String(decoding: urlAsData, as: UTF8.self)
+                rawJSONInputField.text = jsonText
+                
                 AlertViewManager.singleButtonAlertViewControllerWithTitle(title: "Sample Data Successfully Loaded", withMessage: "JSON sample data was able to be loaded for parsing", withButtonTitle: "Okay")
             } catch {
                 print("Error Occurred")
@@ -87,29 +99,5 @@ class SampleViewController: UIViewController {
         }
         
     }
-    
-    // MARK: - Segues
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        //Pass Needed data to Web View controller for loading linkedIn profile url
-        if let vc = segue.destination as? WebViewController {
-            if let url = URL(string: "https://www.linkedin.com/in/bradston-henry") {
-                vc.url = url
-            }
-            vc.articleTitle = title
-            
-        }
-        
-    }
 
-    @IBAction func unwindSegueToSampleViewController(segue: UIStoryboardSegue) {
-        
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        //Check if current called segue is allowed with this VC
-        return SegueClass.isSegueAllowed(allowedSegues: allowedSegues, segueID: identifier)
-    }
-    
 }

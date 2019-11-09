@@ -15,17 +15,17 @@ class SessionDetailsViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func backButtonPressed(_ sender: Any) {
-        
         SegueClass.toSampleViewController()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     // MARK: - Segues
